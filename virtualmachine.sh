@@ -6,9 +6,3 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 sudo systemctl enable mongod
-
-
-sudo apt-get install -y python3-pip zip
-sudo pip3 install azure-identity azure-storage-blob
-
-sudo mkdir -p /mongodb_backup/{scripts,backups,logs}

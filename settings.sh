@@ -1,9 +1,9 @@
 #!/bin/bash
 
 BACKUP_DIR="/mongodb_backup"
-ZIP_PASSWORD="trackmile123**"
-STORAGE_ACCOUNT_NAME="inteiascdevtrackmile"
-CONTAINER_NAME="database-backups"
+ZIP_PASSWORD="password"
+STORAGE_ACCOUNT_NAME="storageaccountname"
+CONTAINER_NAME="containername"
 
 
 sudo mkdir -p $BACKUP_DIR/{scripts,backups,logs}
@@ -15,8 +15,8 @@ sudo pip3 install azure-identity azure-storage-blob
 
 
 sudo tee /etc/profile.d/mongodb_backup_env.sh > /dev/null <<EOT
-export MONGO_BACKUP_USER="backupUser"
-export MONGO_BACKUP_PASSWORD="trackmile"
+export MONGO_BACKUP_USER="mongo_user"
+export MONGO_BACKUP_PASSWORD="mongo_password"
 export MONGO_HOST="localhost"
 export MONGO_PORT="27017"
 export MONGO_AUTH_DB="admin"
